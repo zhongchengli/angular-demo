@@ -8,5 +8,5 @@ export class Account{
   email: string;
   phone: number;
   gender: string;
-  //birthday: string;
+  // birthday: string;
 }

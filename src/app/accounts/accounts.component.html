@@ -1,5 +1,68 @@
 <div class="container">
-  <div>
+  <div class="row">
+    <div class="panel panel-primary filterable">
+
+      <!--Heading-->
+      <div class="panel-heading">
+        <h3 class="panel-title">Accounts</h3>
+
+      </div>
+
+      <!--Body-->
+      <div class="panel-body">
+        <table class="table table-bordered table-list table-hover">
+          <thead>
+          <tr>
+            <th class="hidden-xs">ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Phone</th>
+            <th>Role</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let account of accounts">
+            <td>{{account.id}}</td>
+            <td>{{account.firstname}}</td>
+            <td>{{account.lastname}}</td>
+            <td>{{account.gender}}</td>
+            <td>{{account.email}}</td>
+            <td>{{account.username}}</td>
+            <td>{{account.password}}</td>
+            <td>{{account.phone}}</td>
+            <td>{{account.role}}</td>
+            <td><a class='btn btn-info btn-sm' href="#" (click)="accountDetailModal.show()"><span class="fa fa-edit"></span>&nbsp;Edit</a></td>
+            <td><a class="btn btn-danger btn-sm" href="#" ><span class="fa fa-close"></span> Del</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <!--footer-->
 
   </div>
+</div>
+<div>
+  <!--<app-account-detail #accountDetailModal>-->
+    <!--<div class="app-modal-header">-->
+      <!--header-->
+    <!--</div>-->
+    <!--<div class="app-modal-body">-->
+      <!--Whatever content you like, form fields, anything-->
+      <!--<input type="text">-->
+    <!--</div>-->
+    <!--<div class="app-modal-footer">-->
+      <!--<button type="button" class="btn btn-default" >Close</button>-->
+      <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+    <!--</div>-->
+  <!--</app-account-detail>-->
+  <app-account-detail></app-account-detail>
 </div>

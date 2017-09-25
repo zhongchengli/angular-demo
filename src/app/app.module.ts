@@ -6,7 +6,9 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { AccountComponent } from './account/account.component';
 import { AccountsComponent } from './accounts/accounts.component';
-import {AccountService} from "./service/account.service";
+import { AccountDetailComponent } from './account-detail/account-detail.component';
+import {AccountService} from './service/account.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,12 @@ import {AccountService} from "./service/account.service";
     NavComponent,
     FooterComponent,
     AccountComponent,
-    AccountsComponent
+    AccountsComponent,
+    AccountDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [AccountService],
   bootstrap: [AppComponent]

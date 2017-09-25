@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AccountService} from "../service/account.service";
-import {Account} from "../account";
+import {AccountService} from '../service/account.service';
+import {Account} from '../account';
 
 @Component({
   selector: 'app-accounts',
@@ -21,4 +21,5 @@ export class AccountsComponent implements OnInit {
   getAccounts(): void {
     this.accountService.getAccounts().then(accounts => this.accounts = accounts);
   }
+
 }

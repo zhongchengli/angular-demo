@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Accounts} from "../mock-accounts";
-import {Account} from "../account";
+import {Accounts} from '../mock-accounts';
+import {Account} from '../account';
 
 @Injectable()
 export class AccountService {
@@ -12,6 +12,6 @@ export class AccountService {
   }
 
   getAccountById(id: number): Promise<Account> {
-    return this.getAccounts().then(accounts => accounts.find(account => account.id == id));
+    return this.getAccounts().then(accounts => accounts.find(account => account.id === id));
   }
 }
