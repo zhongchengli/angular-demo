@@ -9,17 +9,22 @@ import {Account} from '../account';
 })
 export class AccountsComponent implements OnInit {
 
-  accounts: Account[];
-
   constructor(private accountService: AccountService) {
   }
 
   ngOnInit() {
-    this.getAccounts();
+
   }
 
-  getAccounts(): void {
-    this.accountService.getAccounts().then(accounts => this.accounts = accounts);
+  get accounts() {
+    return this.accountService.getAccounts();
   }
 
+  deleteAccount(id: number): void {
+    this.accountService.deleteAccountById(id);
+  }
+
+  openModal(): void {
+
+  }
 }

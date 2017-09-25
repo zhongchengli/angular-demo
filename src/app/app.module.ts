@@ -9,6 +9,9 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { AccountDetailComponent } from './account-detail/account-detail.component';
 import {AccountService} from './service/account.service';
 import {FormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import {HttpModule} from '@angular/http';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,14 @@ import {FormsModule} from '@angular/forms';
     FooterComponent,
     AccountComponent,
     AccountsComponent,
-    AccountDetailComponent
+    AccountDetailComponent,
+    ModalComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [AccountService],
   bootstrap: [AppComponent]

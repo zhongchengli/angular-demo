@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="panel panel-primary filterable">
+  <!--<div class="row">-->
+    <div class="panel panel-primary">
 
       <!--Heading-->
       <div class="panel-heading">
@@ -10,10 +10,10 @@
 
       <!--Body-->
       <div class="panel-body">
-        <table class="table table-bordered table-list table-hover">
+        <table class="table table-responsive table-hover">
           <thead>
           <tr>
-            <th class="hidden-xs">ID</th>
+            <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Gender</th>
@@ -37,8 +37,8 @@
             <td>{{account.password}}</td>
             <td>{{account.phone}}</td>
             <td>{{account.role}}</td>
-            <td><a class='btn btn-info btn-sm' href="#" (click)="accountDetailModal.show()"><span class="fa fa-edit"></span>&nbsp;Edit</a></td>
-            <td><a class="btn btn-danger btn-sm" href="#" ><span class="fa fa-close"></span> Del</a></td>
+            <td><a class='btn btn-info btn-sm' [routerLink]="['/detail', account.id]"><span class="fa fa-edit"></span>&nbsp;Edit</a></td>
+            <td><a class="btn btn-danger btn-sm" (click)="deleteAccount(account.id)"><span class="fa fa-close"></span>&nbsp;Del</a></td>
           </tr>
           </tbody>
         </table>
@@ -48,21 +48,6 @@
 
     <!--footer-->
 
-  </div>
+  <!--</div>-->
 </div>
-<div>
-  <!--<app-account-detail #accountDetailModal>-->
-    <!--<div class="app-modal-header">-->
-      <!--header-->
-    <!--</div>-->
-    <!--<div class="app-modal-body">-->
-      <!--Whatever content you like, form fields, anything-->
-      <!--<input type="text">-->
-    <!--</div>-->
-    <!--<div class="app-modal-footer">-->
-      <!--<button type="button" class="btn btn-default" >Close</button>-->
-      <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-    <!--</div>-->
-  <!--</app-account-detail>-->
-  <app-account-detail></app-account-detail>
-</div>
+

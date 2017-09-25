@@ -1,4 +1,4 @@
-export class Account{
+export class Account {
   id: number;
   username: string;
   password: string;
@@ -8,5 +8,8 @@ export class Account{
   email: string;
   phone: number;
   gender: string;
-  // birthday: string;
+
+  constructor(values: Object = {}) {
+    Object.assign(this, values);
+  }
 }
